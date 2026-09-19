@@ -1,161 +1,985 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
+
+
+html{
+    scroll-behavior:smooth;
+}
+
 
 body{
-background:#0f172a;
-color:#f9fafb;
-text-align:center;
+    background:#0f172a;
+    color:#f9fafb;
+    text-align:center;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:#111827;
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:210px;
+    height:100vh;
+
+    background:#111827;
+
+    padding:30px 20px;
+
+    z-index:1000;
 }
 
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
+
+.logo{
+
+    font-size:26px;
+
+    margin-bottom:45px;
+
+    color:white;
 }
 
-nav a{
-color:white;
-text-decoration:none;
+
+.sidebar ul{
+
+    list-style:none;
+
 }
+
+
+.sidebar li{
+
+    margin:24px 0;
+
+}
+
+
+.sidebar a{
+
+    color:#d1d5db;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+.sidebar a:hover{
+
+    color:#3b82f6;
+
+}
+
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main{
+
+    margin-left:210px;
+
+    min-height:100vh;
+
+}
+
+
+
+/* =====================================================
+   HOME
+===================================================== */
 
 header{
-padding:80px 20px;
+
+    padding:100px 20px 80px;
+
 }
+
 
 header h1{
-font-size:48px;
+
+    font-size:48px;
+
 }
+
 
 .title{
-font-size:24px;
-color:#3b82f6;
+
+    font-size:24px;
+
+    color:#3b82f6;
+
+    margin-top:5px;
+
 }
+
 
 .objective{
-max-width:600px;
-margin:auto;
-margin-top:20px;
+
+    max-width:650px;
+
+    margin:20px auto 0;
+
+    color:#d1d5db;
+
+    line-height:1.7;
+
 }
+
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
 
 .socials{
-margin-top:25px;
+
+    margin-top:25px;
+
 }
+
 
 .socials a{
-display:inline-block;
-margin:12px;
-font-size:26px;
-color:white;
-transition:0.3s;
+
+    display:inline-block;
+
+    margin:12px;
+
+    font-size:26px;
+
+    color:white;
+
+    transition:.3s;
+
 }
+
 
 .socials a:hover{
-color:#3b82f6;
-transform:scale(1.2);
+
+    color:#3b82f6;
+
+    transform:scale(1.2);
+
 }
+
 
 .leetcode-icon{
-width:26px;
-height:26px;
-filter:invert(1);
-vertical-align:middle;
-transition:0.3s;
+
+    width:26px;
+
+    height:26px;
+
+    filter:invert(1);
+
+    vertical-align:middle;
+
+    transition:.3s;
+
 }
+
 
 .leetcode-icon:hover{
-transform:scale(1.2);
+
+    transform:scale(1.2);
+
 }
+
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
 
 section{
-padding:60px 20px;
+
+    padding:80px 30px;
+
 }
+
+
+section h2{
+
+    font-size:28px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* =====================================================
+   EDUCATION
+===================================================== */
 
 .education-card{
-background:#1f2937;
-padding:30px;
-border-radius:12px;
-max-width:500px;
-margin:auto;
+
+    background:#1f2937;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    max-width:550px;
+
+    margin:auto;
+
+    transition:.3s;
+
 }
+
+
+.education-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.education-card h3{
+
+    margin-bottom:10px;
+
+}
+
+
+.education-card p{
+
+    color:#d1d5db;
+
+    margin:5px 0;
+
+}
+
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
 
 .skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-max-width:900px;
-margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(150px,1fr));
+
+    gap:20px;
+
+    max-width:950px;
+
+    margin:auto;
+
 }
+
 
 .skill{
-background:#1f2937;
-padding:20px;
-border-radius:10px;
-transition:.3s;
+
+    background:#1f2937;
+
+    padding:22px 15px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
 }
+
+
+.skill i{
+
+    font-size:25px;
+
+    margin-bottom:10px;
+
+}
+
+
+.skill p{
+
+    font-size:14px;
+
+}
+
 
 .skill:hover{
-background:#3b82f6;
-transform:translateY(-5px);
+
+    background:#3b82f6;
+
+    transform:translateY(-5px);
+
 }
+
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
 
 .projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-max-width:1000px;
-margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    max-width:1050px;
+
+    margin:auto;
+
 }
+
 
 .project{
-display:block;
-text-decoration:none;
-color:white;
-background:#1f2937;
-padding:20px;
-border-radius:14px;
-transition:0.3s;
+
+    background:#1f2937;
+
+    padding:20px;
+
+    border-radius:14px;
+
+    transition:.3s;
+
 }
+
 
 .project:hover{
-transform:translateY(-8px);
-background:#374151;
+
+    transform:translateY(-8px);
+
+    background:#374151;
+
 }
+
 
 .project img{
-width:100%;
-height:160px;
-object-fit:cover;
-border-radius:10px;
+
+    width:100%;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+
 }
+
+
+.project h3{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+
+.project p{
+
+    color:#d1d5db;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+.project-link{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:8px 14px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:7px;
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+
+.project-link:hover{
+
+    background:#6366f1;
+
+}
+
+
+
+/* =====================================================
+   PUBLICATION
+===================================================== */
+
+.publication-card{
+
+    max-width:950px;
+
+    margin:30px auto;
+
+    padding:35px;
+
+    background:#1f2937;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    text-align:left;
+
+    transition:.3s;
+
+}
+
+
+.publication-card:hover{
+
+    transform:translateY(-5px);
+
+    background:#263449;
+
+}
+
+
+.publication-icon{
+
+    min-width:150px;
+
+    height:190px;
+
+    background:#111827;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.publication-icon i{
+
+    font-size:70px;
+
+    color:#3b82f6;
+
+}
+
+
+.publication-content{
+
+    flex:1;
+
+}
+
+
+.publication-tag{
+
+    display:inline-block;
+
+    padding:6px 13px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    margin-bottom:15px;
+
+}
+
+
+.publication-content h3{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    line-height:1.4;
+
+}
+
+
+.publication-content p{
+
+    color:#d1d5db;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+}
+
+
+.conference{
+
+    margin-top:15px;
+
+}
+
+
+.conference i{
+
+    color:#3b82f6;
+
+    margin-right:7px;
+
+}
+
+
+.authors{
+
+    margin-top:10px;
+
+}
+
+
+
+/* =====================================================
+   CERTIFICATE
+===================================================== */
+
+.certificate-card{
+
+    max-width:850px;
+
+    margin:30px auto;
+
+    padding:30px;
+
+    background:#1f2937;
+
+    border-radius:16px;
+
+}
+
+
+.certificate-tag{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    margin-bottom:15px;
+
+}
+
+
+.certificate-card h3{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+.certificate-card p{
+
+    color:#d1d5db;
+
+    margin-bottom:25px;
+
+}
+
+
+.certificate-card img{
+
+    width:100%;
+
+    max-height:550px;
+
+    object-fit:contain;
+
+    background:#111827;
+
+    padding:10px;
+
+    border-radius:12px;
+
+}
+
+
+.certificate-buttons{
+
+    margin-top:20px;
+
+}
+
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 .btn{
-display:inline-block;
-padding:12px 25px;
-background:#3b82f6;
-color:white;
-text-decoration:none;
-border-radius:8px;
-margin:10px;
+
+    display:inline-block;
+
+    padding:11px 20px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    margin:6px;
+
+    transition:.3s;
+
+    font-size:14px;
+
 }
+
 
 .btn:hover{
-background:#6366f1;
+
+    background:#6366f1;
+
+    transform:translateY(-2px);
+
 }
 
+
+
+/* =====================================================
+   RESUME
+===================================================== */
+
+#resume{
+
+    padding-bottom:90px;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
 footer{
-margin-top:40px;
-padding:20px;
-background:#111827;
+
+    padding:25px;
+
+    background:#111827;
+
+    color:#9ca3af;
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        padding:18px 10px;
+
+    }
+
+
+    .logo{
+
+        margin-bottom:15px;
+
+        font-size:23px;
+
+    }
+
+
+    .sidebar ul{
+
+        display:flex;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:10px;
+
+    }
+
+
+    .sidebar li{
+
+        margin:5px;
+
+    }
+
+
+    .sidebar a{
+
+        font-size:11px;
+
+    }
+
+
+    .main{
+
+        margin-left:0;
+
+    }
+
+
+    header{
+
+        padding:65px 20px;
+
+    }
+
+
+    header h1{
+
+        font-size:34px;
+
+    }
+
+
+    .title{
+
+        font-size:19px;
+
+    }
+
+
+    .objective{
+
+        font-size:13px;
+
+    }
+
+
+    section{
+
+        padding:60px 15px;
+
+    }
+
+
+    section h2{
+
+        font-size:23px;
+
+    }
+
+
+    .skills{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:12px;
+
+    }
+
+
+    .skill{
+
+        padding:18px 8px;
+
+    }
+
+
+    .skill i{
+
+        font-size:20px;
+
+    }
+
+
+    .skill p{
+
+        font-size:12px;
+
+    }
+
+
+    .projects{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .project{
+
+        padding:15px;
+
+    }
+
+
+    .project img{
+
+        height:180px;
+
+    }
+
+
+    /* Publication */
+
+    .publication-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:25px 18px;
+
+        gap:20px;
+
+    }
+
+
+    .publication-icon{
+
+        min-width:120px;
+
+        width:120px;
+
+        height:150px;
+
+    }
+
+
+    .publication-icon i{
+
+        font-size:55px;
+
+    }
+
+
+    .publication-content h3{
+
+        font-size:18px;
+
+    }
+
+
+    .publication-content p{
+
+        font-size:13px;
+
+    }
+
+
+    .publication-buttons{
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+
+    .publication-buttons .btn{
+
+        margin:5px 0;
+
+    }
+
+
+    /* Certificate */
+
+    .certificate-card{
+
+        padding:20px 12px;
+
+    }
+
+
+    .certificate-card h3{
+
+        font-size:18px;
+
+    }
+
+
+    .certificate-card img{
+
+        max-height:350px;
+
+    }
+
+
+    .certificate-buttons{
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+
+    .certificate-buttons .btn{
+
+        margin:5px 0;
+
+    }
+
 }
