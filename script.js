@@ -1,4 +1,6 @@
-/* ================= TYPING ANIMATION ================= */
+/* =====================================================
+                    TYPING ANIMATION
+===================================================== */
 
 const text = [
     "Software Developer",
@@ -19,7 +21,7 @@ function typeText() {
         text[textIndex];
 
 
-    /* ---------- TYPING ---------- */
+    /* ---------------- TYPING ---------------- */
 
     if (!deleting) {
 
@@ -50,7 +52,7 @@ function typeText() {
     }
 
 
-    /* ---------- DELETING ---------- */
+    /* ---------------- DELETING ---------------- */
 
     else {
 
@@ -92,13 +94,15 @@ function typeText() {
 }
 
 
-/* Start typing */
+/* Start typing animation */
 
 typeText();
 
 
 
-/* ================= ACTIVE NAVIGATION ================= */
+/* =====================================================
+                    ACTIVE NAVIGATION
+===================================================== */
 
 const sections =
     document.querySelectorAll(
@@ -114,13 +118,13 @@ const navLinks =
 
 window.addEventListener(
     "scroll",
-    () => {
+    function () {
 
         let currentSection = "";
 
 
         sections.forEach(
-            section => {
+            function (section) {
 
                 const sectionTop =
                     section.offsetTop - 150;
@@ -148,7 +152,7 @@ window.addEventListener(
 
 
         navLinks.forEach(
-            link => {
+            function (link) {
 
                 link.classList.remove(
                     "active"
