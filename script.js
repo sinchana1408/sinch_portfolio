@@ -1,6 +1,4 @@
-/* =====================================================
-   TYPING ANIMATION
-===================================================== */
+/* ================= TYPING EFFECT ================= */
 
 const texts = [
     "Software Developer",
@@ -39,14 +37,13 @@ function typeEffect(){
 
             setTimeout(
                 typeEffect,
-                1600
+                1400
             );
 
             return;
         }
 
     }
-
     else{
 
         typingElement.textContent =
@@ -77,9 +74,8 @@ function typeEffect(){
 
     setTimeout(
         typeEffect,
-        deleting ? 45 : 85
+        deleting ? 45 : 80
     );
-
 }
 
 
@@ -87,9 +83,7 @@ typeEffect();
 
 
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+/* ================= MOBILE MENU ================= */
 
 const menuBtn =
     document.getElementById("menuBtn");
@@ -111,25 +105,16 @@ menuBtn.addEventListener(
 
         if(navLinks.classList.contains("show")){
 
-            icon.classList.remove(
-                "fa-bars"
-            );
+            icon.classList.remove("fa-bars");
 
-            icon.classList.add(
-                "fa-xmark"
-            );
+            icon.classList.add("fa-xmark");
 
         }
-
         else{
 
-            icon.classList.remove(
-                "fa-xmark"
-            );
+            icon.classList.remove("fa-xmark");
 
-            icon.classList.add(
-                "fa-bars"
-            );
+            icon.classList.add("fa-bars");
 
         }
 
@@ -138,9 +123,7 @@ menuBtn.addEventListener(
 
 
 
-/* =====================================================
-   CLOSE MOBILE MENU AFTER CLICK
-===================================================== */
+/* ================= CLOSE MENU ================= */
 
 document
     .querySelectorAll(".nav-links a")
@@ -150,22 +133,16 @@ document
             "click",
             function(){
 
-                navLinks.classList.remove(
-                    "show"
-                );
+                navLinks.classList.remove("show");
 
 
                 const icon =
                     menuBtn.querySelector("i");
 
 
-                icon.classList.remove(
-                    "fa-xmark"
-                );
+                icon.classList.remove("fa-xmark");
 
-                icon.classList.add(
-                    "fa-bars"
-                );
+                icon.classList.add("fa-bars");
 
             }
         );
@@ -174,15 +151,12 @@ document
 
 
 
-/* =====================================================
-   ACTIVE NAVIGATION
-===================================================== */
+/* ================= ACTIVE NAVIGATION ================= */
 
 const sections =
     document.querySelectorAll(
         "section[id]"
     );
-
 
 const navigationLinks =
     document.querySelectorAll(
@@ -200,8 +174,7 @@ window.addEventListener(
         sections.forEach(section => {
 
             const sectionTop =
-                section.offsetTop - 150;
-
+                section.offsetTop - 120;
 
             const sectionHeight =
                 section.offsetHeight;
