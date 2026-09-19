@@ -9,35 +9,56 @@ let textIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-const typingElement = document.getElementById("typing");
+const typingElement =
+    document.getElementById("typing");
 
 
 function typeText() {
 
-    const currentText = text[textIndex];
+    const currentText =
+        text[textIndex];
 
+
+    /* ---------- TYPING ---------- */
 
     if (!deleting) {
 
         typingElement.textContent =
-            currentText.substring(0, charIndex + 1);
+            currentText.substring(
+                0,
+                charIndex + 1
+            );
 
         charIndex++;
 
 
-        if (charIndex === currentText.length) {
+        if (
+            charIndex ===
+            currentText.length
+        ) {
 
             deleting = true;
 
-            setTimeout(typeText, 1500);
+            setTimeout(
+                typeText,
+                1500
+            );
 
             return;
         }
 
-    } else {
+    }
+
+
+    /* ---------- DELETING ---------- */
+
+    else {
 
         typingElement.textContent =
-            currentText.substring(0, charIndex - 1);
+            currentText.substring(
+                0,
+                charIndex - 1
+            );
 
         charIndex--;
 
@@ -48,8 +69,14 @@ function typeText() {
 
             textIndex++;
 
-            if (textIndex >= text.length) {
+
+            if (
+                textIndex >=
+                text.length
+            ) {
+
                 textIndex = 0;
+
             }
 
         }
@@ -61,62 +88,87 @@ function typeText() {
         typeText,
         deleting ? 50 : 90
     );
+
 }
 
 
+/* Start typing */
+
 typeText();
+
 
 
 /* ================= ACTIVE NAVIGATION ================= */
 
 const sections =
-    document.querySelectorAll("section, .hero");
+    document.querySelectorAll(
+        "section"
+    );
+
 
 const navLinks =
-    document.querySelectorAll(".nav-links a");
+    document.querySelectorAll(
+        ".nav-links a"
+    );
 
 
-window.addEventListener("scroll", function () {
+window.addEventListener(
+    "scroll",
+    () => {
 
-    let currentSection = "";
-
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 150;
-
-        const sectionHeight =
-            section.clientHeight;
+        let currentSection = "";
 
 
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
+        sections.forEach(
+            section => {
 
-            currentSection =
-                section.getAttribute("id");
+                const sectionTop =
+                    section.offsetTop - 150;
 
-        }
-
-    });
+                const sectionHeight =
+                    section.offsetHeight;
 
 
-    navLinks.forEach(link => {
+                if (
+                    window.scrollY >=
+                    sectionTop
+                    &&
+                    window.scrollY <
+                    sectionTop +
+                    sectionHeight
+                ) {
 
-        link.classList.remove("active");
+                    currentSection =
+                        section.id;
+
+                }
+
+            }
+        );
 
 
-        if (
-            link.getAttribute("href") ===
-            "#" + currentSection
-        ) {
+        navLinks.forEach(
+            link => {
 
-            link.classList.add("active");
+                link.classList.remove(
+                    "active"
+                );
 
-        }
 
-    });
+                if (
+                    link.getAttribute("href")
+                    ===
+                    "#" + currentSection
+                ) {
 
-});
+                    link.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
