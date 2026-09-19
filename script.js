@@ -1,77 +1,55 @@
-/* =====================================================
-   TYPING ANIMATION
-===================================================== */
+/* ================= TYPING ANIMATION ================= */
 
 const text = [
     "Software Developer",
     "AI & ML Enthusiast"
 ];
 
-
 let textIndex = 0;
-
 let charIndex = 0;
-
 let deleting = false;
 
-
-const typingElement =
-    document.getElementById("typing");
+const typingElement = document.getElementById("typing");
 
 
-function typingAnimation(){
+function typeText() {
 
-    const currentText =
-        text[textIndex];
+    const currentText = text[textIndex];
 
 
-    if(!deleting){
+    if (!deleting) {
 
         typingElement.textContent =
-            currentText.substring(
-                0,
-                charIndex + 1
-            );
+            currentText.substring(0, charIndex + 1);
 
         charIndex++;
 
 
-        if(charIndex === currentText.length){
+        if (charIndex === currentText.length) {
 
             deleting = true;
 
-            setTimeout(
-                typingAnimation,
-                1600
-            );
+            setTimeout(typeText, 1500);
 
             return;
-
         }
 
-    }
-
-    else{
+    } else {
 
         typingElement.textContent =
-            currentText.substring(
-                0,
-                charIndex - 1
-            );
+            currentText.substring(0, charIndex - 1);
 
         charIndex--;
 
 
-        if(charIndex === 0){
+        if (charIndex === 0) {
 
             deleting = false;
 
             textIndex++;
 
-            if(textIndex >= text.length){
-
+            if (textIndex >= text.length) {
                 textIndex = 0;
-
             }
 
         }
@@ -80,32 +58,27 @@ function typingAnimation(){
 
 
     setTimeout(
-        typingAnimation,
+        typeText,
         deleting ? 50 : 90
     );
-
 }
 
 
-typingAnimation();
+typeText();
 
 
-
-/* =====================================================
-   ACTIVE NAVIGATION
-===================================================== */
+/* ================= ACTIVE NAVIGATION ================= */
 
 const sections =
-    document.querySelectorAll("section, header");
-
+    document.querySelectorAll("section, .hero");
 
 const navLinks =
-    document.querySelectorAll(".sidebar a");
+    document.querySelectorAll(".nav-links a");
 
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", function () {
 
-    let current = "";
+    let currentSection = "";
 
 
     sections.forEach(section => {
@@ -113,10 +86,16 @@ window.addEventListener("scroll", () => {
         const sectionTop =
             section.offsetTop - 150;
 
+        const sectionHeight =
+            section.clientHeight;
 
-        if(window.scrollY >= sectionTop){
 
-            current =
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+
+            currentSection =
                 section.getAttribute("id");
 
         }
@@ -129,10 +108,10 @@ window.addEventListener("scroll", () => {
         link.classList.remove("active");
 
 
-        if(
-            link.getAttribute("href")
-            === "#" + current
-        ){
+        if (
+            link.getAttribute("href") ===
+            "#" + currentSection
+        ) {
 
             link.classList.add("active");
 
