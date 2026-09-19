@@ -1,6 +1,4 @@
-/* =====================================================
-   TYPING ANIMATION
-===================================================== */
+/* ================= TYPING ANIMATION ================= */
 
 const texts = [
     "Software Developer",
@@ -85,9 +83,7 @@ typeEffect();
 
 
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+/* ================= MOBILE MENU ================= */
 
 const menuBtn =
     document.getElementById("menuBtn");
@@ -126,9 +122,7 @@ menuBtn.addEventListener(
 
 
 
-/* =====================================================
-   CLOSE MOBILE MENU AFTER CLICK
-===================================================== */
+/* ================= CLOSE MOBILE MENU ================= */
 
 document
     .querySelectorAll(".nav-links a")
@@ -156,9 +150,7 @@ document
 
 
 
-/* =====================================================
-   ACTIVE NAVIGATION
-===================================================== */
+/* ================= ACTIVE NAVIGATION ================= */
 
 const sections =
     document.querySelectorAll(
@@ -179,7 +171,7 @@ function updateActiveNavigation() {
     sections.forEach(function (section) {
 
         const sectionTop =
-            section.offsetTop - 140;
+            section.offsetTop - 120;
 
         const sectionBottom =
             sectionTop + section.offsetHeight;
@@ -229,9 +221,7 @@ updateActiveNavigation();
 
 
 
-/* =====================================================
-   CLOSE MENU WHEN RESIZING
-===================================================== */
+/* ================= RESIZE ================= */
 
 window.addEventListener(
     "resize",
