@@ -1,33 +1,70 @@
-const text=[
-"Software Developer",
-"AI & ML Enthusiast"
+const text = [
+    "Software Developer",
+    "AI & ML Enthusiast"
 ];
 
-let i=0;
-let j=0;
+let i = 0;
+let j = 0;
+let deleting = false;
 
-(function typing(){
 
-if(i===text.length){
-i=0;
+function typing(){
+
+    const typingElement =
+        document.getElementById("typing");
+
+    const currentText = text[i];
+
+
+    if(!deleting){
+
+        typingElement.textContent =
+            currentText.slice(0, j + 1);
+
+        j++;
+
+
+        if(j === currentText.length){
+
+            deleting = true;
+
+            setTimeout(typing, 1500);
+
+            return;
+        }
+
+    }
+    else{
+
+        typingElement.textContent =
+            currentText.slice(0, j - 1);
+
+        j--;
+
+
+        if(j === 0){
+
+            deleting = false;
+
+            i++;
+
+            if(i === text.length){
+
+                i = 0;
+
+            }
+
+        }
+
+    }
+
+
+    setTimeout(
+        typing,
+        deleting ? 50 : 80
+    );
+
 }
 
-let current=text[i];
-let letter=current.slice(0,++j);
 
-document.getElementById("typing").textContent=letter;
-
-if(letter.length===current.length){
-
-i++;
-j=0;
-setTimeout(typing,1500);
-
-}
-else{
-
-setTimeout(typing,80);
-
-}
-
-})();
+typing();
