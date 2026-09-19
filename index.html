@@ -12,25 +12,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
 
     <!-- Devicon -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    >
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
 <nav class="navbar">
 
@@ -38,27 +48,57 @@
         Sinchana<span>.</span>
     </a>
 
-    <ul class="nav-links">
 
-        <li><a href="#home">Home</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#publication">Publication</a></li>
-        <li><a href="#certificate">Certificate</a></li>
-        <li><a href="#resume">Resume</a></li>
+    <ul class="nav-links" id="navLinks">
+
+        <li>
+            <a href="#home" class="active">Home</a>
+        </li>
+
+        <li>
+            <a href="#education">Education</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#publication">Publication</a>
+        </li>
+
+        <li>
+            <a href="#certificate">Certificate</a>
+        </li>
+
+        <li>
+            <a href="#resume">Resume</a>
+        </li>
 
     </ul>
 
-    <button class="menu-btn" id="menuBtn">
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+    >
+
         <i class="fa-solid fa-bars"></i>
+
     </button>
 
 </nav>
 
 
 
-<!-- ================= HOME ================= -->
+<!-- =====================================================
+     HOME
+===================================================== -->
 
 <section id="home" class="hero">
 
@@ -71,14 +111,15 @@
 
             <img
                 src="Photo.jpeg"
-                alt="Sinchana S">
+                alt="Sinchana S"
+            >
 
         </div>
 
 
-        <!-- STATUS -->
+        <!-- AVAILABILITY -->
 
-        <div class="hero-badge">
+        <div class="availability">
 
             <span class="status-dot"></span>
 
@@ -87,15 +128,21 @@
         </div>
 
 
+        <!-- GREETING -->
+
         <p class="hero-greeting">
             Hello, I'm
         </p>
 
 
+        <!-- NAME -->
+
         <h1>
             Sinchana S
         </h1>
 
+
+        <!-- TYPING TITLE -->
 
         <div class="hero-role">
 
@@ -107,6 +154,8 @@
 
         </div>
 
+
+        <!-- DESCRIPTION -->
 
         <p class="hero-description">
 
@@ -122,7 +171,10 @@
 
         <div class="hero-buttons">
 
-            <a href="#projects" class="primary-btn">
+            <a
+                href="#projects"
+                class="primary-btn"
+            >
 
                 View My Projects
 
@@ -134,7 +186,8 @@
             <a
                 href="sinchu_resume.pdf"
                 target="_blank"
-                class="outline-btn">
+                class="outline-btn"
+            >
 
                 <i class="fa-solid fa-file-lines"></i>
 
@@ -156,54 +209,75 @@
 
             <div class="socials">
 
+
+                <!-- EMAIL -->
+
                 <a
                     href="mailto:sinchanashivanand1408@gmail.com"
-                    aria-label="Email">
+                    aria-label="Email"
+                >
 
                     <i class="fa-solid fa-envelope"></i>
 
                 </a>
 
 
+                <!-- LINKEDIN -->
+
                 <a
                     href="https://www.linkedin.com/in/sinchana-shivanand-07ab0a280"
                     target="_blank"
-                    aria-label="LinkedIn">
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
 
                     <i class="fab fa-linkedin-in"></i>
 
                 </a>
 
 
+                <!-- GITHUB -->
+
                 <a
                     href="https://github.com/sinchana1408"
                     target="_blank"
-                    aria-label="GitHub">
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
 
                     <i class="fab fa-github"></i>
 
                 </a>
 
 
+                <!-- KAGGLE -->
+
                 <a
                     href="https://www.kaggle.com/sinchanashivanand"
                     target="_blank"
-                    aria-label="Kaggle">
+                    rel="noopener noreferrer"
+                    aria-label="Kaggle"
+                >
 
                     <i class="fab fa-kaggle"></i>
 
                 </a>
 
 
+                <!-- LEETCODE -->
+
                 <a
                     href="https://leetcode.com/Sinchana_sinch/"
                     target="_blank"
-                    aria-label="LeetCode">
+                    rel="noopener noreferrer"
+                    aria-label="LeetCode"
+                >
 
                     <img
                         src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg"
                         alt="LeetCode"
-                        class="leetcode-icon">
+                        class="leetcode-icon"
+                    >
 
                 </a>
 
@@ -217,7 +291,9 @@
 
 
 
-<!-- ================= EDUCATION ================= -->
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
 
 <section id="education" class="section">
 
@@ -240,6 +316,7 @@
 
     <div class="education-card">
 
+
         <div class="education-icon">
 
             <i class="fa-solid fa-graduation-cap"></i>
@@ -253,13 +330,16 @@
                 2022 – 2026
             </span>
 
+
             <h3>
                 Vidyavardhaka College of Engineering
             </h3>
 
+
             <p class="degree">
                 B.E – Computer Science (AI & ML)
             </p>
+
 
             <p class="location">
 
@@ -277,7 +357,9 @@
 
 
 
-<!-- ================= SKILLS ================= -->
+<!-- =====================================================
+     SKILLS
+===================================================== -->
 
 <section id="skills" class="section">
 
@@ -300,60 +382,72 @@
 
     <div class="skills-grid">
 
+
         <div class="skill">
             <i class="fab fa-java"></i>
             <span>Java</span>
         </div>
+
 
         <div class="skill">
             <i class="fab fa-python"></i>
             <span>Python</span>
         </div>
 
+
         <div class="skill">
             <i class="fa-solid fa-database"></i>
             <span>SQL</span>
         </div>
+
 
         <div class="skill">
             <i class="devicon-spring-plain"></i>
             <span>Spring Boot</span>
         </div>
 
+
         <div class="skill">
             <i class="fa-solid fa-server"></i>
             <span>Hibernate</span>
         </div>
+
 
         <div class="skill">
             <i class="fa-solid fa-network-wired"></i>
             <span>REST APIs</span>
         </div>
 
+
         <div class="skill">
             <i class="fab fa-docker"></i>
             <span>Docker</span>
         </div>
+
 
         <div class="skill">
             <i class="fab fa-aws"></i>
             <span>AWS</span>
         </div>
 
+
         <div class="skill">
             <i class="fab fa-git-alt"></i>
             <span>Git</span>
         </div>
+
 
         <div class="skill">
             <i class="fa-solid fa-chart-line"></i>
             <span>Data Preprocessing</span>
         </div>
 
+
         <div class="skill">
             <i class="fa-solid fa-brain"></i>
             <span>Model Development</span>
         </div>
+
 
         <div class="skill">
             <i class="fa-solid fa-chart-simple"></i>
@@ -366,7 +460,9 @@
 
 
 
-<!-- ================= PROJECTS ================= -->
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
 
 <section id="projects" class="section">
 
@@ -381,7 +477,7 @@
         </h2>
 
         <p>
-            Some of my recent work
+            Selected projects and applications
         </p>
 
     </div>
@@ -394,16 +490,19 @@
 
         <div class="project-card">
 
+
             <div class="project-image">
 
                 <img
                     src="employee-management.png"
-                    alt="Employee Management System">
+                    alt="Employee Management System"
+                >
 
             </div>
 
 
             <div class="project-content">
+
 
                 <div class="project-header">
 
@@ -419,7 +518,9 @@
                     <a
                         href="https://github.com/sinchana1408/Employee-Management-System.git"
                         target="_blank"
-                        class="project-github">
+                        rel="noopener noreferrer"
+                        class="project-github"
+                    >
 
                         <i class="fab fa-github"></i>
 
@@ -434,8 +535,10 @@
 
 
                 <p>
-                    A Spring Boot CRUD application with MySQL
-                    for efficient employee record management.
+
+                    Spring Boot CRUD application with MySQL
+                    for managing employee records efficiently.
+
                 </p>
 
 
@@ -451,7 +554,9 @@
                 <a
                     href="https://github.com/sinchana1408/Employee-Management-System.git"
                     target="_blank"
-                    class="project-link">
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
 
                     View Project
 
@@ -465,15 +570,18 @@
 
 
 
-        <!-- TOMATOCARE -->
+        <!-- TOMATO CARE -->
 
         <div class="project-card">
+
 
             <div class="project-image">
 
                 <img
                     src="tomato_project.png"
-                    alt="TomatoCare">
+                    alt="TomatoCare"
+                >
+
 
                 <span class="featured-badge">
                     Featured
@@ -483,6 +591,7 @@
 
 
             <div class="project-content">
+
 
                 <div class="project-header">
 
@@ -498,7 +607,9 @@
                     <a
                         href="https://github.com/sinchana1408/Tomato_maturity_detection_and_Harvest_RecommendationSystem"
                         target="_blank"
-                        class="project-github">
+                        rel="noopener noreferrer"
+                        class="project-github"
+                    >
 
                         <i class="fab fa-github"></i>
 
@@ -513,8 +624,10 @@
 
 
                 <p>
+
                     Deep learning-based tomato maturity detection
                     and harvest recommendation system.
+
                 </p>
 
 
@@ -530,7 +643,9 @@
                 <a
                     href="https://github.com/sinchana1408/Tomato_maturity_detection_and_Harvest_RecommendationSystem"
                     target="_blank"
-                    class="project-link">
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
 
                     View Project
 
@@ -548,16 +663,19 @@
 
         <div class="project-card">
 
+
             <div class="project-image">
 
                 <img
                     src="Spelling and Grammer checker.png"
-                    alt="Spelling and Grammar Checker">
+                    alt="Spelling and Grammar Checker"
+                >
 
             </div>
 
 
             <div class="project-content">
+
 
                 <div class="project-header">
 
@@ -573,7 +691,9 @@
                     <a
                         href="https://github.com/sinchana1408/NLP_Grammar_Checker"
                         target="_blank"
-                        class="project-github">
+                        rel="noopener noreferrer"
+                        class="project-github"
+                    >
 
                         <i class="fab fa-github"></i>
 
@@ -588,8 +708,11 @@
 
 
                 <p>
-                    NLP-based tool designed to identify spelling
-                    and grammar errors and improve text quality.
+
+                    NLP-based tool designed to identify
+                    spelling and grammar errors and improve
+                    text quality.
+
                 </p>
 
 
@@ -605,7 +728,9 @@
                 <a
                     href="https://github.com/sinchana1408/NLP_Grammar_Checker"
                     target="_blank"
-                    class="project-link">
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
 
                     View Project
 
@@ -623,7 +748,9 @@
 
 
 
-<!-- ================= PUBLICATION ================= -->
+<!-- =====================================================
+     PUBLICATION
+===================================================== -->
 
 <section id="publication" class="section">
 
@@ -646,6 +773,7 @@
 
     <div class="publication-card">
 
+
         <div class="paper-icon">
 
             <i class="fa-solid fa-file-lines"></i>
@@ -655,25 +783,31 @@
 
         <div class="paper-content">
 
+
             <span class="publication-label">
                 IEEE Conference Paper
             </span>
 
 
             <h3>
+
                 TomatoCare: Tomato Maturity Detection
                 & Harvest Recommendation System
+
             </h3>
 
 
             <p>
+
                 A deep learning-based approach for tomato maturity
-                classification using image-based analysis and
-                intelligent harvest recommendation.
+                classification using image analysis and intelligent
+                harvest recommendation.
+
             </p>
 
 
             <div class="paper-details">
+
 
                 <span>
 
@@ -697,10 +831,12 @@
 
             <div class="paper-buttons">
 
+
                 <a
                     href="TomatoCare-IEEE-Paper.docx"
                     target="_blank"
-                    class="primary-btn small-btn">
+                    class="primary-btn small-btn"
+                >
 
                     <i class="fa-solid fa-file-word"></i>
 
@@ -712,7 +848,8 @@
                 <a
                     href="TomatoCare-IEEE-Paper.docx"
                     download
-                    class="outline-btn small-btn">
+                    class="outline-btn small-btn"
+                >
 
                     <i class="fa-solid fa-download"></i>
 
@@ -730,7 +867,9 @@
 
 
 
-<!-- ================= CERTIFICATE ================= -->
+<!-- =====================================================
+     CERTIFICATE
+===================================================== -->
 
 <section id="certificate" class="section">
 
@@ -753,7 +892,9 @@
 
     <div class="certificate-card">
 
+
         <div class="certificate-top">
+
 
             <div>
 
@@ -768,8 +909,10 @@
 
 
                 <p>
+
                     Certificate received for presenting the
                     TomatoCare research paper at the conference.
+
                 </p>
 
             </div>
@@ -784,17 +927,20 @@
 
             <img
                 src="TomatoCare-Conference-Certificate.jpeg"
-                alt="TomatoCare Conference Certificate">
+                alt="TomatoCare Conference Certificate"
+            >
 
         </div>
 
 
         <div class="certificate-buttons">
 
+
             <a
                 href="TomatoCare-Conference-Certificate.jpeg"
                 target="_blank"
-                class="primary-btn">
+                class="primary-btn"
+            >
 
                 <i class="fa-solid fa-eye"></i>
 
@@ -806,7 +952,8 @@
             <a
                 href="TomatoCare-Conference-Certificate.jpeg"
                 download
-                class="outline-btn">
+                class="outline-btn"
+            >
 
                 <i class="fa-solid fa-download"></i>
 
@@ -822,7 +969,9 @@
 
 
 
-<!-- ================= RESUME ================= -->
+<!-- =====================================================
+     RESUME
+===================================================== -->
 
 <section id="resume" class="section">
 
@@ -845,6 +994,7 @@
 
     <div class="resume-card">
 
+
         <div class="resume-icon">
 
             <i class="fa-solid fa-file-pdf"></i>
@@ -858,17 +1008,21 @@
 
 
         <p>
+
             Explore my education, technical skills,
             projects, and experience.
+
         </p>
 
 
-        <div>
+        <div class="resume-buttons">
+
 
             <a
                 href="sinchu_resume.pdf"
                 target="_blank"
-                class="primary-btn">
+                class="primary-btn"
+            >
 
                 <i class="fa-solid fa-eye"></i>
 
@@ -880,7 +1034,8 @@
             <a
                 href="sinchu_resume.pdf"
                 download
-                class="outline-btn">
+                class="outline-btn"
+            >
 
                 <i class="fa-solid fa-download"></i>
 
@@ -896,11 +1051,14 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
     <div class="footer-content">
+
 
         <h3>
             Sinchana S
@@ -914,14 +1072,23 @@
 
         <div class="footer-socials">
 
-            <a href="mailto:sinchanashivanand1408@gmail.com">
+
+            <a
+                href="mailto:sinchanashivanand1408@gmail.com"
+                aria-label="Email"
+            >
+
                 <i class="fa-solid fa-envelope"></i>
+
             </a>
 
 
             <a
                 href="https://github.com/sinchana1408"
-                target="_blank">
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+            >
 
                 <i class="fab fa-github"></i>
 
@@ -930,7 +1097,10 @@
 
             <a
                 href="https://www.linkedin.com/in/sinchana-shivanand-07ab0a280"
-                target="_blank">
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+            >
 
                 <i class="fab fa-linkedin"></i>
 
@@ -948,6 +1118,8 @@
 </footer>
 
 
+
+<!-- JavaScript -->
 
 <script src="script.js"></script>
 
