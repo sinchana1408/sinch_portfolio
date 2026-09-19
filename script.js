@@ -1,177 +1,144 @@
-/* =====================================================
-                    TYPING ANIMATION
-===================================================== */
+/* =========================
+   TYPING ANIMATION
+========================= */
 
-const text = [
+const typingText = document.getElementById("typing-text");
+
+const words = [
     "Software Developer",
-    "AI & ML Enthusiast"
+    "AI & ML Enthusiast",
+    "Python Developer",
+    "Machine Learning Enthusiast"
 ];
 
-let textIndex = 0;
+let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-const typingElement =
-    document.getElementById("typing");
+function typeEffect() {
 
-
-function typeText() {
-
-    const currentText =
-        text[textIndex];
-
+    const currentWord = words[wordIndex];
 
     if (!deleting) {
 
-        typingElement.textContent =
-            currentText.substring(
-                0,
-                charIndex + 1
-            );
+        typingText.textContent =
+            currentWord.substring(0, charIndex + 1);
 
         charIndex++;
 
-
-        if (
-            charIndex ===
-            currentText.length
-        ) {
+        if (charIndex === currentWord.length) {
 
             deleting = true;
 
-            setTimeout(
-                typeText,
-                1500
-            );
+            setTimeout(typeEffect, 1500);
 
             return;
         }
 
-    }
+    } else {
 
-
-    else {
-
-        typingElement.textContent =
-            currentText.substring(
-                0,
-                charIndex - 1
-            );
+        typingText.textContent =
+            currentWord.substring(0, charIndex - 1);
 
         charIndex--;
-
 
         if (charIndex === 0) {
 
             deleting = false;
 
-            textIndex++;
+            wordIndex++;
 
-
-            if (
-                textIndex >=
-                text.length
-            ) {
-
-                textIndex = 0;
-
+            if (wordIndex >= words.length) {
+                wordIndex = 0;
             }
-
         }
-
     }
 
+    const typingSpeed = deleting ? 50 : 90;
 
-    setTimeout(
-        typeText,
-        deleting ? 50 : 90
-    );
-
+    setTimeout(typeEffect, typingSpeed);
 }
 
-
-typeText();
-
+typeEffect();
 
 
-/* =====================================================
-                    ACTIVE NAVIGATION
-===================================================== */
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
 
-const sections =
-    document.querySelectorAll(
-        "section"
-    );
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
 
-
-const navLinks =
-    document.querySelectorAll(
-        ".nav-links a"
-    );
-
-
-function updateActiveNavigation() {
+window.addEventListener("scroll", () => {
 
     let currentSection = "";
 
+    sections.forEach(section => {
 
-    sections.forEach(
-        function(section) {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
 
-            const sectionTop =
-                section.offsetTop - 150;
-
-            const sectionHeight =
-                section.offsetHeight;
-
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY <
-                sectionTop + sectionHeight
-            ) {
-
-                currentSection =
-                    section.id;
-
-            }
-
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            currentSection = section.getAttribute("id");
         }
-    );
+
+    });
 
 
-    navLinks.forEach(
-        function(link) {
+    navLinks.forEach(link => {
 
-            link.classList.remove(
-                "active"
-            );
+        link.classList.remove("active");
 
-
-            if (
-                link.getAttribute("href") ===
-                "#" + currentSection
-            ) {
-
-                link.classList.add(
-                    "active"
-                );
-
-            }
-
+        if (
+            link.getAttribute("href") === "#" + currentSection
+        ) {
+            link.classList.add("active");
         }
-    );
 
-}
+    });
 
-
-window.addEventListener(
-    "scroll",
-    updateActiveNavigation
-);
+});
 
 
-window.addEventListener(
-    "load",
-    updateActiveNavigation
-);
+/* =========================
+   NAVBAR SCROLL EFFECT
+========================= */
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 50) {
+
+        navbar.style.boxShadow =
+            "0 5px 25px rgba(0, 0, 0, 0.18)";
+
+    } else {
+
+        navbar.style.boxShadow = "none";
+
+    }
+
+});
+
+
+/* =========================
+   CLOSE MOBILE NAVIGATION
+========================= */
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        link.classList.add("active");
+
+    });
+
+});
