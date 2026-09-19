@@ -1,4 +1,6 @@
-/* ================= TYPING ANIMATION ================= */
+/* =====================================================
+   TYPING ANIMATION
+===================================================== */
 
 const texts = [
     "Software Developer",
@@ -14,13 +16,13 @@ const typingElement =
     document.getElementById("typing");
 
 
-function typeEffect() {
+function typeEffect(){
 
     const currentText =
         texts[textIndex];
 
 
-    if (!deleting) {
+    if(!deleting){
 
         typingElement.textContent =
             currentText.substring(
@@ -31,19 +33,21 @@ function typeEffect() {
         charIndex++;
 
 
-        if (charIndex === currentText.length) {
+        if(charIndex === currentText.length){
 
             deleting = true;
 
             setTimeout(
                 typeEffect,
-                1300
+                1600
             );
 
             return;
         }
 
-    } else {
+    }
+
+    else{
 
         typingElement.textContent =
             currentText.substring(
@@ -54,13 +58,13 @@ function typeEffect() {
         charIndex--;
 
 
-        if (charIndex === 0) {
+        if(charIndex === 0){
 
             deleting = false;
 
             textIndex++;
 
-            if (textIndex >= texts.length) {
+            if(textIndex >= texts.length){
 
                 textIndex = 0;
 
@@ -73,7 +77,7 @@ function typeEffect() {
 
     setTimeout(
         typeEffect,
-        deleting ? 45 : 75
+        deleting ? 45 : 85
     );
 
 }
@@ -83,18 +87,20 @@ typeEffect();
 
 
 
-/* ================= MOBILE MENU ================= */
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 const menuBtn =
     document.getElementById("menuBtn");
 
 const navLinks =
-    document.getElementById("navLinks");
+    document.querySelector(".nav-links");
 
 
 menuBtn.addEventListener(
     "click",
-    function () {
+    function(){
 
         navLinks.classList.toggle("show");
 
@@ -103,17 +109,27 @@ menuBtn.addEventListener(
             menuBtn.querySelector("i");
 
 
-        if (navLinks.classList.contains("show")) {
+        if(navLinks.classList.contains("show")){
 
-            icon.classList.remove("fa-bars");
+            icon.classList.remove(
+                "fa-bars"
+            );
 
-            icon.classList.add("fa-xmark");
+            icon.classList.add(
+                "fa-xmark"
+            );
 
-        } else {
+        }
 
-            icon.classList.remove("fa-xmark");
+        else{
 
-            icon.classList.add("fa-bars");
+            icon.classList.remove(
+                "fa-xmark"
+            );
+
+            icon.classList.add(
+                "fa-bars"
+            );
 
         }
 
@@ -122,26 +138,34 @@ menuBtn.addEventListener(
 
 
 
-/* ================= CLOSE MOBILE MENU ================= */
+/* =====================================================
+   CLOSE MOBILE MENU AFTER CLICK
+===================================================== */
 
 document
     .querySelectorAll(".nav-links a")
-    .forEach(function (link) {
+    .forEach(link => {
 
         link.addEventListener(
             "click",
-            function () {
+            function(){
 
-                navLinks.classList.remove("show");
+                navLinks.classList.remove(
+                    "show"
+                );
 
 
                 const icon =
                     menuBtn.querySelector("i");
 
 
-                icon.classList.remove("fa-xmark");
+                icon.classList.remove(
+                    "fa-xmark"
+                );
 
-                icon.classList.add("fa-bars");
+                icon.classList.add(
+                    "fa-bars"
+                );
 
             }
         );
@@ -150,12 +174,15 @@ document
 
 
 
-/* ================= ACTIVE NAVIGATION ================= */
+/* =====================================================
+   ACTIVE NAVIGATION
+===================================================== */
 
 const sections =
     document.querySelectorAll(
         "section[id]"
     );
+
 
 const navigationLinks =
     document.querySelectorAll(
@@ -163,84 +190,52 @@ const navigationLinks =
     );
 
 
-function updateActiveNavigation() {
+window.addEventListener(
+    "scroll",
+    function(){
 
-    let currentSection = "home";
-
-
-    sections.forEach(function (section) {
-
-        const sectionTop =
-            section.offsetTop - 120;
-
-        const sectionBottom =
-            sectionTop + section.offsetHeight;
+        let current = "";
 
 
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionBottom
-        ) {
+        sections.forEach(section => {
 
-            currentSection =
-                section.getAttribute("id");
-
-        }
-
-    });
+            const sectionTop =
+                section.offsetTop - 150;
 
 
-    navigationLinks.forEach(
-        function (link) {
+            const sectionHeight =
+                section.offsetHeight;
+
+
+            if(
+                window.scrollY >= sectionTop &&
+                window.scrollY <
+                sectionTop + sectionHeight
+            ){
+
+                current =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navigationLinks.forEach(link => {
 
             link.classList.remove("active");
 
 
-            if (
+            if(
                 link.getAttribute("href") ===
-                "#" + currentSection
-            ) {
+                "#" + current
+            ){
 
                 link.classList.add("active");
 
             }
 
-        }
-    );
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateActiveNavigation
-);
-
-
-updateActiveNavigation();
-
-
-
-/* ================= RESIZE ================= */
-
-window.addEventListener(
-    "resize",
-    function () {
-
-        if (window.innerWidth > 700) {
-
-            navLinks.classList.remove("show");
-
-
-            const icon =
-                menuBtn.querySelector("i");
-
-
-            icon.classList.remove("fa-xmark");
-
-            icon.classList.add("fa-bars");
-
-        }
+        });
 
     }
 );
