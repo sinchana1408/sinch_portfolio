@@ -2,126 +2,55 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sinchana S | Portfolio</title>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    >
-
-
-    <!-- Google Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Devicon -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    >
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<nav class="sidebar">
+<nav class="navbar">
 
     <div class="logo">
-        Sinchana
+        Sinchana S
     </div>
 
-
-    <ul>
-
-        <li>
-            <a href="#home">
-                <i class="fa-solid fa-house"></i>
-                Home
-            </a>
-        </li>
-
-
-        <li>
-            <a href="#education">
-                <i class="fa-solid fa-graduation-cap"></i>
-                Education
-            </a>
-        </li>
-
-
-        <li>
-            <a href="#skills">
-                <i class="fa-solid fa-code"></i>
-                Skills
-            </a>
-        </li>
-
-
-        <li>
-            <a href="#projects">
-                <i class="fa-solid fa-laptop-code"></i>
-                Projects
-            </a>
-        </li>
-
-
-        <li>
-            <a href="#publications">
-                <i class="fa-solid fa-file-lines"></i>
-                Publications
-            </a>
-        </li>
-
-
-        <li>
-            <a href="#certificate">
-                <i class="fa-solid fa-certificate"></i>
-                Certificate
-            </a>
-        </li>
-
-
-        <li>
-            <a href="#resume">
-                <i class="fa-solid fa-file-pdf"></i>
-                Resume
-            </a>
-        </li>
-
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publication">Publication</a></li>
+        <li><a href="#certificate">Certificate</a></li>
+        <li><a href="#resume">Resume</a></li>
     </ul>
 
 </nav>
 
 
+<!-- ================= HOME ================= -->
 
-<!-- =====================================================
-     MAIN CONTENT
-===================================================== -->
-
-<main class="main">
-
-
-<!-- =====================================================
-     HOME
-===================================================== -->
-
-<header id="home">
+<section id="home" class="hero">
 
     <div class="hero-content">
 
@@ -129,105 +58,72 @@
             Hello, I'm
         </p>
 
-
         <h1>
             Sinchana S
         </h1>
 
-
-        <p class="title" id="typing">
+        <h2 id="typing">
             Software Developer
+        </h2>
+
+        <p class="description">
+            Aspiring Software Developer passionate about building
+            scalable backend applications and intelligent AI-driven solutions.
         </p>
 
-
-        <p class="objective">
-
-            Aspiring Software Developer passionate about
-            building scalable backend applications and
-            intelligent AI-driven solutions.
-
-        </p>
-
-
-        <!-- Social Links -->
 
         <div class="socials">
 
-
-            <a
-                href="mailto:sinchanashivanand1408@gmail.com"
-                aria-label="Email"
-            >
+            <a href="mailto:sinchanashivanand1408@gmail.com">
                 <i class="fa-solid fa-envelope"></i>
             </a>
 
-
-            <a
-                href="https://www.linkedin.com/in/sinchana-shivanand-07ab0a280"
-                target="_blank"
-                aria-label="LinkedIn"
-            >
+            <a href="https://www.linkedin.com/in/sinchana-shivanand-07ab0a280"
+               target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
 
-
-            <a
-                href="https://github.com/sinchana1408"
-                target="_blank"
-                aria-label="GitHub"
-            >
+            <a href="https://github.com/sinchana1408"
+               target="_blank">
                 <i class="fab fa-github"></i>
             </a>
 
-
-            <a
-                href="https://www.kaggle.com/sinchanashivanand"
-                target="_blank"
-                aria-label="Kaggle"
-            >
+            <a href="https://www.kaggle.com/sinchanashivanand"
+               target="_blank">
                 <i class="fab fa-kaggle"></i>
             </a>
 
+            <a href="https://leetcode.com/Sinchana_sinch/"
+               target="_blank">
 
-            <a
-                href="https://leetcode.com/Sinchana_sinch/"
-                target="_blank"
-                aria-label="LeetCode"
-            >
                 <img
                     src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg"
-                    class="leetcode-icon"
                     alt="LeetCode"
+                    class="leetcode"
                 >
+
             </a>
 
         </div>
 
     </div>
 
-</header>
+</section>
 
 
-
-<!-- =====================================================
-     EDUCATION
-===================================================== -->
+<!-- ================= EDUCATION ================= -->
 
 <section id="education">
 
-    <h2>
-        <span>01.</span> Education
+    <h2 class="section-title">
+        Education
     </h2>
-
 
     <div class="education-card">
 
         <div class="education-icon">
-
             <i class="fa-solid fa-graduation-cap"></i>
-
         </div>
-
 
         <div>
 
@@ -235,16 +131,13 @@
                 Vidyavardhaka College of Engineering
             </h3>
 
-
-            <p class="location">
+            <p>
                 Mysore, Karnataka
             </p>
-
 
             <p>
                 B.E - Computer Science (AI & ML)
             </p>
-
 
             <p class="year">
                 2022 – 2026
@@ -257,90 +150,74 @@
 </section>
 
 
-
-<!-- =====================================================
-     SKILLS
-===================================================== -->
+<!-- ================= SKILLS ================= -->
 
 <section id="skills">
 
-    <h2>
-        <span>02.</span> Skills
+    <h2 class="section-title">
+        Skills
     </h2>
 
-
-    <div class="skills">
-
+    <div class="skills-grid">
 
         <div class="skill">
             <i class="fab fa-java"></i>
-            <p>Java</p>
+            <span>Java</span>
         </div>
-
 
         <div class="skill">
             <i class="fab fa-python"></i>
-            <p>Python</p>
+            <span>Python</span>
         </div>
-
 
         <div class="skill">
             <i class="fa-solid fa-database"></i>
-            <p>SQL</p>
+            <span>SQL</span>
         </div>
-
 
         <div class="skill">
             <i class="devicon-spring-plain"></i>
-            <p>Spring Boot</p>
+            <span>Spring Boot</span>
         </div>
-
 
         <div class="skill">
             <i class="fa-solid fa-server"></i>
-            <p>Hibernate</p>
+            <span>Hibernate</span>
         </div>
-
 
         <div class="skill">
             <i class="fa-solid fa-network-wired"></i>
-            <p>REST APIs</p>
+            <span>REST APIs</span>
         </div>
-
 
         <div class="skill">
             <i class="fab fa-docker"></i>
-            <p>Docker</p>
+            <span>Docker</span>
         </div>
-
 
         <div class="skill">
             <i class="fab fa-aws"></i>
-            <p>AWS</p>
+            <span>AWS</span>
         </div>
-
 
         <div class="skill">
             <i class="fab fa-git-alt"></i>
-            <p>Git</p>
+            <span>Git</span>
         </div>
-
 
         <div class="skill">
             <i class="fa-solid fa-chart-line"></i>
-            <p>Data Preprocessing</p>
+            <span>Data Preprocessing</span>
         </div>
-
 
         <div class="skill">
             <i class="fa-solid fa-brain"></i>
-            <p>Model Development</p>
+            <span>Model Development</span>
         </div>
-
 
         <div class="skill">
             <i class="fa-solid fa-chart-simple"></i>
-            <p>Predictive Analytics</p>
+            <span>Predictive Analytics</span>
         </div>
 
     </div>
@@ -348,82 +225,55 @@
 </section>
 
 
-
-<!-- =====================================================
-     PROJECTS
-===================================================== -->
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects">
 
-    <h2>
-        <span>03.</span> Projects
+    <h2 class="section-title">
+        Projects
     </h2>
 
 
-    <div class="projects">
+    <div class="projects-grid">
 
 
-        <!-- =================================================
-             EMPLOYEE MANAGEMENT
-        ================================================== -->
+        <!-- EMPLOYEE MANAGEMENT -->
 
-        <div class="project">
+        <div class="project-card">
 
-            <div class="project-image">
-
-                <img
-                    src="employee-management.png"
-                    alt="Employee Management System"
-                >
-
-            </div>
-
+            <img
+                src="employee-management.png"
+                alt="Employee Management System"
+            >
 
             <div class="project-content">
 
-                <div class="project-top">
-
+                <div class="project-icon">
                     <i class="fa-solid fa-users"></i>
-
-                    <a
-                        href="https://github.com/sinchana1408/Employee-Management-System.git"
-                        target="_blank"
-                        aria-label="Employee Management GitHub"
-                    >
-                        <i class="fab fa-github"></i>
-                    </a>
-
                 </div>
-
 
                 <h3>
                     Employee Management System
                 </h3>
 
-
                 <p>
                     Spring Boot CRUD application with MySQL
-                    for managing employee records efficiently.
+                    for managing employee records.
                 </p>
 
-
-                <div class="tech">
-
+                <div class="tags">
                     <span>Java</span>
                     <span>Spring Boot</span>
                     <span>MySQL</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/sinchana1408/Employee-Management-System.git"
                     target="_blank"
-                    class="project-link"
-                >
+                    class="github-btn">
 
-                    View Project
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fab fa-github"></i>
+                    GitHub
 
                 </a>
 
@@ -432,72 +282,43 @@
         </div>
 
 
+        <!-- TOMATO CARE -->
 
-        <!-- =================================================
-             TOMATOCARE
-        ================================================== -->
+        <div class="project-card">
 
-        <div class="project featured">
-
-            <div class="project-image">
-
-                <img
-                    src="tomato_project.png"
-                    alt="TomatoCare Tomato Maturity Detection"
-                >
-
-                <span class="featured-label">
-                    AI / ML
-                </span>
-
-            </div>
-
+            <img
+                src="tomato_project.png"
+                alt="TomatoCare"
+            >
 
             <div class="project-content">
 
-                <div class="project-top">
-
+                <div class="project-icon tomato">
                     <i class="fa-solid fa-seedling"></i>
-
-                    <a
-                        href="https://github.com/sinchana1408/Tomato_maturity_detection_and_Harvest_RecommendationSystem"
-                        target="_blank"
-                        aria-label="TomatoCare GitHub"
-                    >
-                        <i class="fab fa-github"></i>
-                    </a>
-
                 </div>
-
 
                 <h3>
                     TomatoCare
                 </h3>
 
-
                 <p>
-                    Deep learning-based tomato maturity
-                    detection and harvest recommendation system.
+                    Deep learning-based tomato maturity detection
+                    and harvest recommendation system.
                 </p>
 
-
-                <div class="tech">
-
+                <div class="tags">
                     <span>Python</span>
                     <span>CNN</span>
                     <span>Deep Learning</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/sinchana1408/Tomato_maturity_detection_and_Harvest_RecommendationSystem"
                     target="_blank"
-                    class="project-link"
-                >
+                    class="github-btn">
 
-                    View Project
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fab fa-github"></i>
+                    GitHub
 
                 </a>
 
@@ -506,68 +327,43 @@
         </div>
 
 
+        <!-- SPELLING GRAMMAR CHECKER -->
 
-        <!-- =================================================
-             SPELLING & GRAMMAR CHECKER
-        ================================================== -->
+        <div class="project-card">
 
-        <div class="project">
-
-            <div class="project-image">
-
-                <img
-                    src="Spelling and Grammer checker.png"
-                    alt="Spelling and Grammar Checker"
-                >
-
-            </div>
-
+            <img
+                src="Spelling and Grammer checker.png"
+                alt="Spelling and Grammar Checker"
+            >
 
             <div class="project-content">
 
-                <div class="project-top">
-
+                <div class="project-icon grammar">
                     <i class="fa-solid fa-spell-check"></i>
-
-                    <a
-                        href="https://github.com/sinchana1408/NLP_Grammar_Checker"
-                        target="_blank"
-                        aria-label="Grammar Checker GitHub"
-                    >
-                        <i class="fab fa-github"></i>
-                    </a>
-
                 </div>
-
 
                 <h3>
                     Spelling & Grammar Checker
                 </h3>
 
-
                 <p>
-                    NLP-based tool for detecting spelling
-                    and grammar errors and improving text.
+                    NLP-based tool for detecting spelling and
+                    grammar errors and improving text quality.
                 </p>
 
-
-                <div class="tech">
-
+                <div class="tags">
                     <span>Python</span>
                     <span>NLP</span>
                     <span>Grammar Correction</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/sinchana1408/NLP_Grammar_Checker"
                     target="_blank"
-                    class="project-link"
-                >
+                    class="github-btn">
 
-                    View Project
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fab fa-github"></i>
+                    GitHub
 
                 </a>
 
@@ -581,90 +377,73 @@
 </section>
 
 
+<!-- ================= PUBLICATION ================= -->
 
-<!-- =====================================================
-     RESEARCH & PUBLICATIONS
-===================================================== -->
+<section id="publication">
 
-<section id="publications">
-
-    <h2>
-        <span>04.</span> Research & Publications
+    <h2 class="section-title">
+        Research & Publication
     </h2>
 
 
     <div class="publication-card">
 
-
-        <div class="publication-icon">
-
+        <div class="paper-icon">
             <i class="fa-solid fa-file-lines"></i>
-
         </div>
 
 
-        <div class="publication-content">
+        <div class="paper-content">
 
-
-            <span class="publication-tag">
+            <span class="publication-label">
                 IEEE Conference Paper
             </span>
-
 
             <h3>
                 TomatoCare: An Intelligent Deep Learning-Based
                 System for Tomato Maturity Classification
             </h3>
 
-
             <p>
-
-                A deep learning-based system for automatic
-                tomato maturity classification using computer
-                vision and transfer learning techniques.
-
+                A deep learning-based system for automatic tomato
+                maturity classification using computer vision and
+                transfer learning techniques.
             </p>
 
+            <div class="paper-details">
 
-            <div class="publication-info">
-
-                <p>
+                <span>
                     <i class="fa-solid fa-building-columns"></i>
                     AIKIIE 2026
-                </p>
+                </span>
 
-
-                <p>
-                    <i class="fa-solid fa-microchip"></i>
-                    Artificial Intelligence & Deep Learning
-                </p>
+                <span>
+                    <i class="fa-solid fa-brain"></i>
+                    Deep Learning
+                </span>
 
             </div>
 
 
-            <div class="publication-buttons">
-
+            <div class="paper-buttons">
 
                 <a
                     href="TomatoCare-IEEE-Paper.docx"
                     target="_blank"
-                    class="btn"
-                >
+                    class="btn">
 
                     <i class="fa-solid fa-file-word"></i>
                     View Paper
 
                 </a>
 
-
                 <a
                     href="TomatoCare-IEEE-Paper.docx"
                     download
-                    class="btn secondary"
-                >
+                    class="btn secondary">
 
                     <i class="fa-solid fa-download"></i>
-                    Download Paper
+                    Download
 
                 </a>
 
@@ -677,34 +456,28 @@
 </section>
 
 
-
-<!-- =====================================================
-     CONFERENCE CERTIFICATE
-===================================================== -->
+<!-- ================= CERTIFICATE ================= -->
 
 <section id="certificate">
 
-    <h2>
-        <span>05.</span> Conference Certificate
+    <h2 class="section-title">
+        Conference Certificate
     </h2>
 
 
     <div class="certificate-card">
 
-
-        <div class="certificate-header">
+        <div class="certificate-heading">
 
             <div>
 
-                <span class="certificate-tag">
+                <span class="publication-label">
                     Conference Achievement
                 </span>
-
 
                 <h3>
                     TomatoCare – AIKIIE 2026
                 </h3>
-
 
                 <p>
                     Certificate of Appreciation for presenting
@@ -713,8 +486,7 @@
 
             </div>
 
-
-            <i class="fa-solid fa-award award-icon"></i>
+            <i class="fa-solid fa-award award"></i>
 
         </div>
 
@@ -734,23 +506,20 @@
             <a
                 href="TomatoCare-Conference-Certificate.jpeg"
                 target="_blank"
-                class="btn"
-            >
+                class="btn">
 
                 <i class="fa-solid fa-eye"></i>
                 View Certificate
 
             </a>
 
-
             <a
                 href="TomatoCare-Conference-Certificate.jpeg"
                 download
-                class="btn secondary"
-            >
+                class="btn secondary">
 
                 <i class="fa-solid fa-download"></i>
-                Download Certificate
+                Download
 
             </a>
 
@@ -761,44 +530,34 @@
 </section>
 
 
-
-<!-- =====================================================
-     RESUME
-===================================================== -->
+<!-- ================= RESUME ================= -->
 
 <section id="resume">
 
-    <h2>
-        <span>06.</span> Resume
+    <h2 class="section-title">
+        Resume
     </h2>
 
 
     <div class="resume-card">
 
-        <div class="resume-icon">
-
-            <i class="fa-solid fa-file-pdf"></i>
-
-        </div>
-
+        <i class="fa-solid fa-file-pdf resume-icon"></i>
 
         <h3>
             My Resume
         </h3>
-
 
         <p>
             View or download my latest resume.
         </p>
 
 
-        <div class="resume-buttons">
+        <div>
 
             <a
                 href="sinchu_resume.pdf"
                 target="_blank"
-                class="btn"
-            >
+                class="btn">
 
                 <i class="fa-solid fa-eye"></i>
                 View Resume
@@ -809,8 +568,7 @@
             <a
                 href="sinchu_resume.pdf"
                 download
-                class="btn secondary"
-            >
+                class="btn secondary">
 
                 <i class="fa-solid fa-download"></i>
                 Download Resume
@@ -824,10 +582,7 @@
 </section>
 
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -835,23 +590,10 @@
         © 2026 Sinchana S
     </p>
 
-
-    <p class="footer-text">
-        Built with HTML, CSS & JavaScript
-    </p>
-
 </footer>
 
 
-</main>
-
-
-
-<!-- JavaScript -->
-
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
