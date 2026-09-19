@@ -1,56 +1,76 @@
+/* =====================================================
+   TYPING ANIMATION
+===================================================== */
+
 const text = [
     "Software Developer",
     "AI & ML Enthusiast"
 ];
 
-let i = 0;
-let j = 0;
+
+let textIndex = 0;
+
+let charIndex = 0;
+
 let deleting = false;
 
 
-function typing(){
+const typingElement =
+    document.getElementById("typing");
 
-    const typingElement =
-        document.getElementById("typing");
 
-    const currentText = text[i];
+function typingAnimation(){
+
+    const currentText =
+        text[textIndex];
 
 
     if(!deleting){
 
         typingElement.textContent =
-            currentText.slice(0, j + 1);
+            currentText.substring(
+                0,
+                charIndex + 1
+            );
 
-        j++;
+        charIndex++;
 
 
-        if(j === currentText.length){
+        if(charIndex === currentText.length){
 
             deleting = true;
 
-            setTimeout(typing, 1500);
+            setTimeout(
+                typingAnimation,
+                1600
+            );
 
             return;
+
         }
 
     }
+
     else{
 
         typingElement.textContent =
-            currentText.slice(0, j - 1);
+            currentText.substring(
+                0,
+                charIndex - 1
+            );
 
-        j--;
+        charIndex--;
 
 
-        if(j === 0){
+        if(charIndex === 0){
 
             deleting = false;
 
-            i++;
+            textIndex++;
 
-            if(i === text.length){
+            if(textIndex >= text.length){
 
-                i = 0;
+                textIndex = 0;
 
             }
 
@@ -60,11 +80,64 @@ function typing(){
 
 
     setTimeout(
-        typing,
-        deleting ? 50 : 80
+        typingAnimation,
+        deleting ? 50 : 90
     );
 
 }
 
 
-typing();
+typingAnimation();
+
+
+
+/* =====================================================
+   ACTIVE NAVIGATION
+===================================================== */
+
+const sections =
+    document.querySelectorAll("section, header");
+
+
+const navLinks =
+    document.querySelectorAll(".sidebar a");
+
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop - 150;
+
+
+        if(window.scrollY >= sectionTop){
+
+            current =
+                section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+
+        if(
+            link.getAttribute("href")
+            === "#" + current
+        ){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
