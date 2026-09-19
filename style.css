@@ -1,10 +1,11 @@
-/* ================= GLOBAL ================= */
+/* =====================================================
+                       RESET
+===================================================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -16,11 +17,15 @@ html {
 body {
     background: #0f172a;
     color: #f8fafc;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
 
 
-/* ================= NAVBAR ================= */
+
+/* =====================================================
+                      NAVBAR
+===================================================== */
 
 .navbar {
 
@@ -41,7 +46,7 @@ body {
 
     padding: 0 7%;
 
-    background: rgba(15, 23, 42, 0.96);
+    background: rgba(15, 23, 42, 0.97);
 
     border-bottom: 1px solid #263244;
 
@@ -51,17 +56,19 @@ body {
 
 .logo {
 
-    font-size: 24px;
+    color: #ffffff;
+
+    font-size: 23px;
 
     font-weight: 700;
-
-    color: #ffffff;
 }
 
 
 .nav-links {
 
     display: flex;
+
+    align-items: center;
 
     gap: 25px;
 
@@ -89,7 +96,9 @@ body {
 
 
 
-/* ================= HERO ================= */
+/* =====================================================
+                        HERO
+===================================================== */
 
 .hero {
 
@@ -103,35 +112,47 @@ body {
 
     text-align: center;
 
-    padding: 90px 20px 60px;
+    padding: 100px 20px 50px;
 
     background:
-
         radial-gradient(
-            circle at center,
-            rgba(59, 130, 246, 0.12),
-            transparent 45%
+            circle at 50% 35%,
+            rgba(59, 130, 246, 0.10),
+            transparent 40%
         );
 }
 
 
 .hero-content {
 
+    width: 100%;
+
     max-width: 750px;
 
-    width: 100%;
+    margin: 0 auto;
 }
 
 
-/* ================= PROFILE PHOTO ================= */
+
+/* =====================================================
+                    PROFILE PHOTO
+===================================================== */
 
 .profile-photo {
 
-    width: 145px;
+    width: 150px !important;
 
-    height: 145px;
+    height: 150px !important;
 
-    margin: 0 auto 20px;
+    min-width: 150px;
+
+    min-height: 150px;
+
+    max-width: 150px;
+
+    max-height: 150px;
+
+    margin: 0 auto 18px;
 
     padding: 4px;
 
@@ -143,18 +164,26 @@ body {
         #60a5fa
     );
 
-    box-shadow:
-        0 10px 35px rgba(59, 130, 246, 0.25);
-
     overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(59, 130, 246, 0.25);
 }
 
 
 .profile-photo img {
 
-    width: 100%;
+    width: 100% !important;
 
-    height: 100%;
+    height: 100% !important;
+
+    min-width: 0 !important;
+
+    min-height: 0 !important;
+
+    max-width: 100% !important;
+
+    max-height: 100% !important;
 
     display: block;
 
@@ -169,37 +198,45 @@ body {
 
 
 
-/* ================= HERO TEXT ================= */
+/* =====================================================
+                    HERO TEXT
+===================================================== */
 
 .hello {
+
+    margin-bottom: 3px;
 
     color: #94a3b8;
 
     font-size: 15px;
-
-    margin-bottom: 3px;
 }
 
 
 .hero h1 {
 
-    font-size: 58px;
+    margin: 0 0 5px;
+
+    color: #f8fafc;
+
+    font-size: 54px;
+
+    font-weight: 700;
 
     line-height: 1.15;
-
-    margin: 0 0 8px;
 }
 
 
 .hero h2 {
 
-    color: #3b82f6;
-
-    font-size: 25px;
-
     min-height: 38px;
 
-    margin-bottom: 12px;
+    margin: 0 0 14px;
+
+    color: #3b82f6;
+
+    font-size: 24px;
+
+    font-weight: 600;
 }
 
 
@@ -213,39 +250,46 @@ body {
 
     font-size: 14px;
 
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 
 .description strong {
 
-    color: #e2e8f0;
-
+    color: #f1f5f9;
 }
 
 
 
-/* ================= SOCIALS ================= */
+/* =====================================================
+                    SOCIAL ICONS
+===================================================== */
 
 .socials {
 
-    margin-top: 22px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
 }
 
 
 .socials a {
 
-    width: 42px;
+    width: 40px;
 
-    height: 42px;
+    height: 40px;
 
-    display: inline-flex;
-
-    justify-content: center;
+    display: flex;
 
     align-items: center;
 
-    margin: 5px;
+    justify-content: center;
 
     border-radius: 50%;
 
@@ -253,13 +297,13 @@ body {
 
     border: 1px solid #334155;
 
-    color: white;
+    color: #ffffff;
 
-    font-size: 18px;
-
-    transition: 0.3s;
+    font-size: 17px;
 
     text-decoration: none;
+
+    transition: 0.3s;
 }
 
 
@@ -269,22 +313,28 @@ body {
 
     border-color: #3b82f6;
 
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 
 .leetcode {
 
-    width: 18px;
+    width: 17px !important;
 
-    height: 18px;
+    height: 17px !important;
+
+    max-width: 17px !important;
+
+    max-height: 17px !important;
 
     filter: invert(1);
 }
 
 
 
-/* ================= SECTIONS ================= */
+/* =====================================================
+                      SECTIONS
+===================================================== */
 
 section {
 
@@ -292,22 +342,28 @@ section {
 
     margin: auto;
 
-    padding: 80px 30px;
+    padding: 75px 30px;
 }
 
 
 .section-title {
 
+    margin-bottom: 40px;
+
     text-align: center;
+
+    color: #f8fafc;
 
     font-size: 30px;
 
-    margin-bottom: 40px;
+    font-weight: 600;
 }
 
 
 
-/* ================= EDUCATION ================= */
+/* =====================================================
+                     EDUCATION
+===================================================== */
 
 .education-card {
 
@@ -363,13 +419,15 @@ section {
 }
 
 
-.education-card h3 {
+.education-info h3 {
 
     margin-bottom: 5px;
+
+    font-size: 18px;
 }
 
 
-.education-card p {
+.education-info p {
 
     color: #cbd5e1;
 
@@ -377,14 +435,16 @@ section {
 }
 
 
-.education-card .year {
+.education-info .year {
 
     color: #3b82f6;
 }
 
 
 
-/* ================= SKILLS ================= */
+/* =====================================================
+                       SKILLS
+===================================================== */
 
 .skills-grid {
 
@@ -402,7 +462,7 @@ section {
 
 .skill {
 
-    padding: 20px 10px;
+    min-height: 95px;
 
     display: flex;
 
@@ -410,7 +470,11 @@ section {
 
     align-items: center;
 
+    justify-content: center;
+
     gap: 8px;
+
+    padding: 15px;
 
     background: #1e293b;
 
@@ -424,11 +488,15 @@ section {
 
 .skill i {
 
+    color: #e2e8f0;
+
     font-size: 27px;
 }
 
 
 .skill span {
+
+    color: #e2e8f0;
 
     font-size: 13px;
 }
@@ -445,7 +513,9 @@ section {
 
 
 
-/* ================= PROJECTS ================= */
+/* =====================================================
+                      PROJECTS
+===================================================== */
 
 .projects-grid {
 
@@ -477,7 +547,7 @@ section {
 
 .project-card:hover {
 
-    transform: translateY(-8px);
+    transform: translateY(-7px);
 
     border-color: #3b82f6;
 
@@ -490,19 +560,11 @@ section {
 
     width: 100%;
 
-    height: 200px;
+    height: 190px;
 
     display: block;
 
     object-fit: cover;
-
-    transition: 0.4s;
-}
-
-
-.project-card:hover > img {
-
-    transform: scale(1.04);
 }
 
 
@@ -514,11 +576,11 @@ section {
 
 .project-icon {
 
+    margin-bottom: 8px;
+
     color: #3b82f6;
 
     font-size: 23px;
-
-    margin-bottom: 10px;
 }
 
 
@@ -536,19 +598,19 @@ section {
 
 .project-content h3 {
 
-    font-size: 19px;
+    margin-bottom: 9px;
 
-    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 
 .project-content p {
 
+    min-height: 60px;
+
     color: #94a3b8;
 
     font-size: 13px;
-
-    min-height: 60px;
 }
 
 
@@ -558,15 +620,15 @@ section {
 
     flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 6px;
 
-    margin: 15px 0;
+    margin: 14px 0;
 }
 
 
 .tags span {
 
-    padding: 4px 9px;
+    padding: 4px 8px;
 
     background: #111827;
 
@@ -588,9 +650,9 @@ section {
 
     padding: 9px 15px;
 
-    color: white;
-
     background: #2563eb;
+
+    color: #ffffff;
 
     border-radius: 7px;
 
@@ -609,7 +671,9 @@ section {
 
 
 
-/* ================= PUBLICATION ================= */
+/* =====================================================
+                    PUBLICATION
+===================================================== */
 
 .publication-card {
 
@@ -645,9 +709,9 @@ section {
 
 .paper-icon {
 
-    width: 150px;
+    width: 145px;
 
-    height: 190px;
+    height: 180px;
 
     flex-shrink: 0;
 
@@ -665,9 +729,9 @@ section {
 
 .paper-icon i {
 
-    font-size: 65px;
-
     color: #3b82f6;
+
+    font-size: 60px;
 }
 
 
@@ -681,27 +745,27 @@ section {
 
     display: inline-block;
 
+    margin-bottom: 12px;
+
     padding: 5px 12px;
 
     background: #2563eb;
 
-    color: white;
+    color: #ffffff;
 
     border-radius: 20px;
 
     font-size: 11px;
-
-    margin-bottom: 12px;
 }
 
 
 .paper-content h3 {
 
-    font-size: 22px;
+    margin-bottom: 12px;
+
+    font-size: 21px;
 
     line-height: 1.4;
-
-    margin-bottom: 12px;
 }
 
 
@@ -709,7 +773,7 @@ section {
 
     color: #94a3b8;
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
@@ -735,20 +799,22 @@ section {
 
 .paper-details i {
 
-    color: #3b82f6;
-
     margin-right: 5px;
+
+    color: #3b82f6;
 }
 
 
 .paper-buttons {
 
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 
 
-/* ================= BUTTON ================= */
+/* =====================================================
+                       BUTTONS
+===================================================== */
 
 .btn {
 
@@ -760,17 +826,17 @@ section {
 
     gap: 8px;
 
-    padding: 11px 19px;
-
     margin: 5px;
+
+    padding: 10px 18px;
 
     background: #3b82f6;
 
-    color: white;
+    color: #ffffff;
 
     border-radius: 8px;
 
-    font-size: 13px;
+    font-size: 12px;
 
     text-decoration: none;
 
@@ -799,7 +865,9 @@ section {
 
 
 
-/* ================= CERTIFICATE ================= */
+/* =====================================================
+                     CERTIFICATE
+===================================================== */
 
 .certificate-card {
 
@@ -821,9 +889,9 @@ section {
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    justify-content: space-between;
 
     margin-bottom: 25px;
 }
@@ -831,17 +899,17 @@ section {
 
 .certificate-heading h3 {
 
-    font-size: 22px;
+    font-size: 21px;
 }
 
 
 .certificate-heading p {
 
+    margin-top: 5px;
+
     color: #94a3b8;
 
     font-size: 13px;
-
-    margin-top: 5px;
 }
 
 
@@ -849,15 +917,15 @@ section {
 
     color: #f59e0b;
 
-    font-size: 50px;
+    font-size: 48px;
 }
 
 
 .certificate-image {
 
-    background: #111827;
+    padding: 10px;
 
-    padding: 12px;
+    background: #111827;
 
     border-radius: 12px;
 }
@@ -865,11 +933,11 @@ section {
 
 .certificate-image img {
 
-    display: block;
-
     width: 100%;
 
     max-height: 600px;
+
+    display: block;
 
     object-fit: contain;
 
@@ -879,14 +947,16 @@ section {
 
 .certificate-buttons {
 
-    text-align: center;
+    margin-top: 18px;
 
-    margin-top: 20px;
+    text-align: center;
 }
 
 
 
-/* ================= RESUME ================= */
+/* =====================================================
+                       RESUME
+===================================================== */
 
 .resume-card {
 
@@ -894,9 +964,9 @@ section {
 
     margin: auto;
 
-    text-align: center;
-
     padding: 35px;
+
+    text-align: center;
 
     background: #1e293b;
 
@@ -910,36 +980,23 @@ section {
 
     display: block;
 
-    font-size: 50px;
+    margin-bottom: 15px;
 
     color: #ef4444;
 
-    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+
+.resume-card h3 {
+
+    font-size: 21px;
 }
 
 
 .resume-card p {
 
-    color: #94a3b8;
-
-    font-size: 14px;
-
     margin: 8px 0 20px;
-}
-
-
-
-/* ================= FOOTER ================= */
-
-footer {
-
-    padding: 25px;
-
-    text-align: center;
-
-    background: #111827;
-
-    border-top: 1px solid #1e293b;
 
     color: #94a3b8;
 
@@ -948,30 +1005,56 @@ footer {
 
 
 
-/* ================= TABLET ================= */
+/* =====================================================
+                        FOOTER
+===================================================== */
 
-@media(max-width:1000px) {
+footer {
+
+    padding: 25px;
+
+    background: #111827;
+
+    border-top: 1px solid #1e293b;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+
+/* =====================================================
+                     TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
 
     .skills-grid {
 
-        grid-template-columns:
-            repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
 
     .projects-grid {
 
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
 
-/* ================= MOBILE ================= */
+/* =====================================================
+                     MOBILE
+===================================================== */
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
+
+
+    /* NAVIGATION */
 
     .navbar {
 
@@ -979,11 +1062,11 @@ footer {
 
         height: auto;
 
-        padding: 17px 10px;
-
         flex-direction: column;
 
         gap: 12px;
+
+        padding: 16px 10px;
     }
 
 
@@ -999,7 +1082,7 @@ footer {
 
         justify-content: center;
 
-        gap: 8px;
+        gap: 7px 12px;
     }
 
 
@@ -1009,21 +1092,32 @@ footer {
     }
 
 
+
+    /* HERO */
+
     .hero {
 
         min-height: auto;
 
-        padding: 55px 18px 55px;
+        padding: 45px 18px 55px;
     }
 
 
     .profile-photo {
 
-        width: 115px;
+        width: 125px !important;
 
-        height: 115px;
+        height: 125px !important;
 
-        margin-bottom: 16px;
+        min-width: 125px;
+
+        min-height: 125px;
+
+        max-width: 125px;
+
+        max-height: 125px;
+
+        margin-bottom: 15px;
     }
 
 
@@ -1035,15 +1129,44 @@ footer {
 
     .hero h2 {
 
-        font-size: 20px;
+        font-size: 21px;
+
+        min-height: 32px;
+    }
+
+
+    .hello {
+
+        font-size: 14px;
     }
 
 
     .description {
 
-        font-size: 13px;
+        font-size: 12px;
+
+        line-height: 1.7;
     }
 
+
+    .socials {
+
+        margin-top: 17px;
+    }
+
+
+    .socials a {
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 15px;
+    }
+
+
+
+    /* SECTIONS */
 
     section {
 
@@ -1053,16 +1176,31 @@ footer {
 
     .section-title {
 
-        font-size: 24px;
-
         margin-bottom: 30px;
+
+        font-size: 25px;
     }
 
 
+
+    /* EDUCATION */
+
+    .education-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px 18px;
+    }
+
+
+
+    /* SKILLS */
+
     .skills-grid {
 
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
         gap: 10px;
     }
@@ -1070,13 +1208,15 @@ footer {
 
     .skill {
 
-        padding: 17px 8px;
+        min-height: 85px;
+
+        padding: 12px 7px;
     }
 
 
     .skill i {
 
-        font-size: 21px;
+        font-size: 22px;
     }
 
 
@@ -1085,6 +1225,9 @@ footer {
         font-size: 11px;
     }
 
+
+
+    /* PROJECTS */
 
     .projects-grid {
 
@@ -1100,13 +1243,8 @@ footer {
     }
 
 
-    .education-card {
 
-        flex-direction: column;
-
-        text-align: center;
-    }
-
+    /* PUBLICATION */
 
     .publication-card {
 
@@ -1122,25 +1260,19 @@ footer {
 
         width: 120px;
 
-        height: 150px;
+        height: 145px;
     }
 
 
     .paper-icon i {
 
-        font-size: 55px;
+        font-size: 50px;
     }
 
 
     .paper-content h3 {
 
         font-size: 18px;
-    }
-
-
-    .paper-content > p {
-
-        font-size: 13px;
     }
 
 
@@ -1166,6 +1298,9 @@ footer {
     }
 
 
+
+    /* CERTIFICATE */
+
     .certificate-card {
 
         padding: 18px 12px;
@@ -1176,9 +1311,9 @@ footer {
 
         flex-direction: column;
 
-        text-align: center;
-
         gap: 15px;
+
+        text-align: center;
     }
 
 
@@ -1191,12 +1326,6 @@ footer {
     .certificate-image {
 
         padding: 5px;
-    }
-
-
-    .certificate-image img {
-
-        max-height: 450px;
     }
 
 
@@ -1216,9 +1345,28 @@ footer {
     }
 
 
+
+    /* RESUME */
+
     .resume-card {
 
         padding: 25px 15px;
+    }
+
+
+    .resume-buttons {
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    .resume-buttons .btn {
+
+        width: 100%;
+
+        margin: 5px 0;
     }
 
 }
