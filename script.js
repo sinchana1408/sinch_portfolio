@@ -21,8 +21,6 @@ function typeText() {
         text[textIndex];
 
 
-    /* ---------------- TYPING ---------------- */
-
     if (!deleting) {
 
         typingElement.textContent =
@@ -51,8 +49,6 @@ function typeText() {
 
     }
 
-
-    /* ---------------- DELETING ---------------- */
 
     else {
 
@@ -94,8 +90,6 @@ function typeText() {
 }
 
 
-/* Start typing animation */
-
 typeText();
 
 
@@ -116,63 +110,68 @@ const navLinks =
     );
 
 
-window.addEventListener(
-    "scroll",
-    function () {
+function updateActiveNavigation() {
 
-        let currentSection = "";
+    let currentSection = "";
 
 
-        sections.forEach(
-            function (section) {
+    sections.forEach(
+        function(section) {
 
-                const sectionTop =
-                    section.offsetTop - 150;
+            const sectionTop =
+                section.offsetTop - 150;
 
-                const sectionHeight =
-                    section.offsetHeight;
+            const sectionHeight =
+                section.offsetHeight;
 
 
-                if (
-                    window.scrollY >=
-                    sectionTop
-                    &&
-                    window.scrollY <
-                    sectionTop +
-                    sectionHeight
-                ) {
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY <
+                sectionTop + sectionHeight
+            ) {
 
-                    currentSection =
-                        section.id;
-
-                }
+                currentSection =
+                    section.id;
 
             }
-        );
+
+        }
+    );
 
 
-        navLinks.forEach(
-            function (link) {
+    navLinks.forEach(
+        function(link) {
 
-                link.classList.remove(
+            link.classList.remove(
+                "active"
+            );
+
+
+            if (
+                link.getAttribute("href") ===
+                "#" + currentSection
+            ) {
+
+                link.classList.add(
                     "active"
                 );
 
-
-                if (
-                    link.getAttribute("href")
-                    ===
-                    "#" + currentSection
-                ) {
-
-                    link.classList.add(
-                        "active"
-                    );
-
-                }
-
             }
-        );
 
-    }
+        }
+    );
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNavigation
+);
+
+
+window.addEventListener(
+    "load",
+    updateActiveNavigation
 );
