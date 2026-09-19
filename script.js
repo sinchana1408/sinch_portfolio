@@ -1,55 +1,73 @@
-/* ================= TYPING ANIMATION ================= */
+/* =====================================================
+   TYPING ANIMATION
+===================================================== */
 
-const text = [
+const texts = [
     "Software Developer",
-    "AI & ML Enthusiast"
+    "AI & ML Enthusiast",
+    "Backend Developer"
 ];
 
 let textIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-const typingElement = document.getElementById("typing");
+const typingElement =
+    document.getElementById("typing");
 
 
-function typeText() {
+function typeEffect(){
 
-    const currentText = text[textIndex];
+    const currentText =
+        texts[textIndex];
 
 
-    if (!deleting) {
+    if(!deleting){
 
         typingElement.textContent =
-            currentText.substring(0, charIndex + 1);
+            currentText.substring(
+                0,
+                charIndex + 1
+            );
 
         charIndex++;
 
 
-        if (charIndex === currentText.length) {
+        if(charIndex === currentText.length){
 
             deleting = true;
 
-            setTimeout(typeText, 1500);
+            setTimeout(
+                typeEffect,
+                1600
+            );
 
             return;
         }
 
-    } else {
+    }
+
+    else{
 
         typingElement.textContent =
-            currentText.substring(0, charIndex - 1);
+            currentText.substring(
+                0,
+                charIndex - 1
+            );
 
         charIndex--;
 
 
-        if (charIndex === 0) {
+        if(charIndex === 0){
 
             deleting = false;
 
             textIndex++;
 
-            if (textIndex >= text.length) {
+            if(textIndex >= texts.length){
+
                 textIndex = 0;
+
             }
 
         }
@@ -58,65 +76,166 @@ function typeText() {
 
 
     setTimeout(
-        typeText,
-        deleting ? 50 : 90
+        typeEffect,
+        deleting ? 45 : 85
     );
+
 }
 
 
-typeText();
+typeEffect();
 
 
-/* ================= ACTIVE NAVIGATION ================= */
 
-const sections =
-    document.querySelectorAll("section, .hero");
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn =
+    document.getElementById("menuBtn");
 
 const navLinks =
-    document.querySelectorAll(".nav-links a");
+    document.querySelector(".nav-links");
 
 
-window.addEventListener("scroll", function () {
+menuBtn.addEventListener(
+    "click",
+    function(){
 
-    let currentSection = "";
-
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 150;
-
-        const sectionHeight =
-            section.clientHeight;
+        navLinks.classList.toggle("show");
 
 
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
+        const icon =
+            menuBtn.querySelector("i");
 
-            currentSection =
-                section.getAttribute("id");
+
+        if(navLinks.classList.contains("show")){
+
+            icon.classList.remove(
+                "fa-bars"
+            );
+
+            icon.classList.add(
+                "fa-xmark"
+            );
 
         }
+
+        else{
+
+            icon.classList.remove(
+                "fa-xmark"
+            );
+
+            icon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   CLOSE MOBILE MENU AFTER CLICK
+===================================================== */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            function(){
+
+                navLinks.classList.remove(
+                    "show"
+                );
+
+
+                const icon =
+                    menuBtn.querySelector("i");
+
+
+                icon.classList.remove(
+                    "fa-xmark"
+                );
+
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+        );
 
     });
 
 
-    navLinks.forEach(link => {
 
-        link.classList.remove("active");
+/* =====================================================
+   ACTIVE NAVIGATION
+===================================================== */
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
 
 
-        if (
-            link.getAttribute("href") ===
-            "#" + currentSection
-        ) {
+const navigationLinks =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
 
-            link.classList.add("active");
 
-        }
+window.addEventListener(
+    "scroll",
+    function(){
 
-    });
+        let current = "";
 
-});
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+
+            const sectionHeight =
+                section.offsetHeight;
+
+
+            if(
+                window.scrollY >= sectionTop &&
+                window.scrollY <
+                sectionTop + sectionHeight
+            ){
+
+                current =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navigationLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+
+            if(
+                link.getAttribute("href") ===
+                "#" + current
+            ){
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    }
+);
